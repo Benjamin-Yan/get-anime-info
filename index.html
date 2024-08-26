@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>動漫資料收集器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>查詢動漫資料</h1>
+
+    <div class="row">
+        <div class="column">
+            <div class="section">
+                <p class="stitle">Input & execution</p>
+                <ol>
+                    <li>查詢動漫在 Bangumi 中的 ID</li>
+                    <input type="text" placeholder="輸入名字" />
+                    <button>Search</button>
+
+                    <li>串接 ID 到查詢頁面<span id="ia1"></span></li>
+                    <input type="text" placeholder="輸入 ID" readonly />
+                    <button disabled>Enter</button>
+
+                    <li>顯示資料<span id="ia2"></span></li>
+                    <input type="text" placeholder="這裡會顯示縮圖網址" readonly />
+                    <button disabled>Check</button>
+                    <p>▨ 開播時間</p>
+                    <input type="text" placeholder="這裡會顯示開播時間" readonly />
+                    <p>▨ 總集數</p>
+                    <input type="text" placeholder="這裡會顯示總集數" readonly />
+
+                    <li>確認以上資料並生成 YAML 格式的資料</li>
+                    <button disabled>Go!</button>
+                </ol>
+            </div>
+        </div>
+        <div class="column">
+            <div class="section">
+                <p class="stitle">Output</p>
+                <p id="outfield">The output will show here.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="main.js"></script>
+</body>
+
+</html>
