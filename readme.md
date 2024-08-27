@@ -11,12 +11,12 @@
 - totalcount
 
 ### 使用方法
-1. 填上欲查詢的動漫名字，並按下 Search 按鈕。
+1. 填上欲查詢的動漫名字(如: `孤獨搖滾`, `不時輕聲地以俄語遮羞的鄰座艾莉同學`)，並按下 Search 按鈕。
 2. 接著請等待 ID 自動填上，若查詢失敗，請點擊標題旁的連結手動查詢(網址最後面的數字就是了)。得到作品 ID 後，請點擊 Enter 按鈕。
 3. 請等待資料(縮圖網址 & 開播時間 & 總集數)自動填上，若想確認圖片是否正確，可以點擊 Check 按鈕查看。
 4. 最後按下 Go 按鈕就會在右側顯示 YAML 格式的資料啦!
 
 ### 致謝
-- [Bangumi 番组计划](https://bangumi.tv/) (資料來源 API)
-- [繁化姬](https://docs.zhconvert.org/api/convert/) (翻譯用 API)
+- 資料來源 API: [Bangumi 番组计划](https://bangumi.tv/)
+- 翻譯用 API  : [繁化姬](https://docs.zhconvert.org/api/convert/)
 
