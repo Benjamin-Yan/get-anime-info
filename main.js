@@ -5,7 +5,7 @@ const allButton = document.getElementsByTagName('button');
 // Helper functions
 function simplified(string) {
     if(string === "") {alert("請先輸入內容!");return;}
-    fetch(`https://api.zhconvert.org/convert?converter=Simplified&text=${string}`)
+    fetch(`https://cors-anywhere.herokuapp.com/https://api.zhconvert.org/convert?converter=Simplified&text=${string}`)
         .then(r => r.json())
         .then(data => {
             const outstring = data.data.text;
@@ -29,7 +29,7 @@ function formatDateString(dateString) {
 
 // Main functions
 function getId(instring) {
-    fetch(`https://api.bgm.tv/search/subject/${instring}?type=2&responseGroup=small`)
+    fetch(`https://cors-anywhere.herokuapp.com/https://api.bgm.tv/search/subject/${instring}?type=2&responseGroup=small`)
         .then(r => r.json())
         .then(data => {
             const ID = data.list[0].id;
@@ -44,7 +44,7 @@ function getId(instring) {
 }
 
 function search(id) {
-    fetch(`https://api.bgm.tv/v0/subjects/${id}`)
+    fetch(`https://cors-anywhere.herokuapp.com/https://api.bgm.tv/v0/subjects/${id}`)
         .then(r => r.json())
         .then(data => {
             const imageurl = data.images.medium;
