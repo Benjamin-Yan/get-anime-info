@@ -110,10 +110,6 @@ button:disabled {
     border: 1px solid #c78d8d;
 }
 
-#presect {
-    overflow-wrap: break-word;
-}
-
 #cprt {
     text-align: center;
     margin: 10px 0;

@@ -87,7 +87,7 @@ function printYAML() {
   link: 
   des: ""`;
 
-    document.getElementById('outfield').innerHTML = `<pre id="presect">${yamlContent}</pre>`;
+    document.getElementById('outfield').innerHTML = `<pre>${yamlContent}</pre>`;
     allInput[0].value = '';
 }
 
