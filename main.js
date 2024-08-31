@@ -4,8 +4,7 @@ const allButton = document.getElementsByTagName('button');
 
 // Helper functions
 function simplified(string) {
-    if(string === "") {alert("請先輸入內容!");return;}
-    fetch(`https://cors-anywhere.herokuapp.com/https://api.zhconvert.org/convert?converter=Simplified&text=${string}`)
+    fetch(`https://corsproxy.io/?https://api.zhconvert.org/convert?converter=Simplified&text=${string}`)
         .then(r => r.json())
         .then(data => {
             const outstring = data.data.text;
@@ -21,15 +20,15 @@ function formatDateString(dateString) {
     const year = date.getFullYear();
     const monthIndex = date.getMonth(); // return index
 
-    const months = ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'];
+    const months = ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二'];
     const month = months[monthIndex];
 
-    return `${year}${month}`;
+    return `${year}${month}月`;
 }
 
 // Main functions
 function getId(instring) {
-    fetch(`https://cors-anywhere.herokuapp.com/https://api.bgm.tv/search/subject/${instring}?type=2&responseGroup=small`)
+    fetch(`https://corsproxy.io/?https://api.bgm.tv/search/subject/${instring}?type=2&responseGroup=small`)
         .then(r => r.json())
         .then(data => {
             const ID = data.list[0].id;
@@ -44,7 +43,7 @@ function getId(instring) {
 }
 
 function search(id) {
-    fetch(`https://cors-anywhere.herokuapp.com/https://api.bgm.tv/v0/subjects/${id}`)
+    fetch(`https://corsproxy.io/?https://api.bgm.tv/v0/subjects/${id}`)
         .then(r => r.json())
         .then(data => {
             const imageurl = data.images.medium;
@@ -88,11 +87,14 @@ function printYAML() {
   link: 
   des: ""`;
 
-    document.getElementById('outfield').innerHTML = `<pre>${yamlContent}</pre>`;
+    document.getElementById('outfield').innerHTML = `<pre id="presect">${yamlContent}</pre>`;
+    allInput[0].value = '';
 }
 
+// Button trigger
 allButton[0].addEventListener('click', function() {
     const searchword = allInput[0].value;
+    if(searchword.trim() === "") {alert("請先輸入內容!");return;}
     simplified(searchword);
 });
 
