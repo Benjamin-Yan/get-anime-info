@@ -1,3 +1,5 @@
+# 動漫資料收集器
+
 ### 功能
 此工具是用來查詢動漫的基本資料的，請點右側連結進入[動漫資料收集器](https://benjamin-yan.github.io/get-anime-info/)。
 
