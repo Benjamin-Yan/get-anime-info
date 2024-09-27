@@ -39,7 +39,7 @@ function getId(instring) {
             allInput[1].value = "搜尋 ID 時發生錯誤!";
         });
     allButton[1].disabled = false;
-    allInput[1].readonly = false;
+    allInput[1].readOnly = false;
 }
 
 function search(id) {
