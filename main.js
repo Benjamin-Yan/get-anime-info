@@ -43,7 +43,7 @@ function getId(instring) {
 }
 
 function search(id) {
-    fetch(`https://corsproxy.io/?https://api.bgm.tv/v0/subjects/${id}`)
+    fetch(`https://corsproxy.io/?url=https://api.bgm.tv/v0/subjects/${id}`)
         .then(r => r.json())
         .then(data => {
             const imageurl = data.images.medium;
