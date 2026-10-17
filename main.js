@@ -30,7 +30,9 @@ function formatDateString(dateString) {
 
 // Main functions
 function getId(instring) {
-    fetch(`https://corsproxy.io/?https://api.bgm.tv/search/subject/${instring}?type=2&responseGroup=small`)
+    const url = `https://api.bgm.tv/search/subject/${instring}?type=2&responseGroup=small`;
+
+    fetch(`https://reef-proxy.onrender.com/get?url=${encodeURIComponent(url)}`)
         .then(r => r.json())
         .then(data => {
             const ID = data.list[0].id;
@@ -45,7 +47,9 @@ function getId(instring) {
 }
 
 function search(id) {
-    fetch(`https://corsproxy.io/?url=https://api.bgm.tv/v0/subjects/${id}`)
+    const url = `https://api.bgm.tv/v0/subjects/${id}`;
+
+    fetch(`https://reef-proxy.onrender.com/get?url=${encodeURIComponent(url)}`)
         .then(r => r.json())
         .then(data => {
             const imageurl = data.images.medium;
