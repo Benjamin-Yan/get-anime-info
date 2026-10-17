@@ -4,7 +4,9 @@ const allButton = document.getElementsByTagName('button');
 
 // Helper functions
 function simplified(string) {
-    fetch(`https://corsproxy.io/?https://api.zhconvert.org/convert?converter=Simplified&text=${string}`)
+    const url = `https://api.zhconvert.org/convert?converter=Simplified&text=${string}`;
+
+    fetch(`https://reef-proxy.onrender.com/get?url=${encodeURIComponent(url)}`)
         .then(r => r.json())
         .then(data => {
             const outstring = data.data.text;
